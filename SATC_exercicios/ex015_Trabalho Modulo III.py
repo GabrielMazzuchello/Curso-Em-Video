@@ -88,3 +88,5 @@ while True:
     else:
         limpar()
         print('           {}Opção invalida{}          '.format('\033[31m', '\033[m'))
+        # caso a opção informada não seja correspondente, retorna opção invalida
+        
