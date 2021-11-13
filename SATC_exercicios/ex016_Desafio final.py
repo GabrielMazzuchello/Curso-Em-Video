@@ -52,7 +52,7 @@ while True:
     |       [*] Multiplicação      |
     |       [/] Divizão            |
     |       [**] Potenciação       |
-    |       [raiz] Raiz            |
+    |       [raiz] Raiz Quadrada   |
     |       [%] Porcentagem        |
     |       [S] Sair               |
     |{'=' * 30}|''')
