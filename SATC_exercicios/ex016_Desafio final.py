@@ -56,8 +56,8 @@ while True:
     |       [%] Porcentagem        |
     |       [S] Sair               |
     |{'=' * 30}|''')
-
     operacao = str(input()).strip()
+    
     if operacao == 'raiz':
         print('{:.1f}'.format(raiz()))
     elif operacao == '%':
