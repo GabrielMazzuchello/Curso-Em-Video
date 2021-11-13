@@ -1,8 +1,10 @@
 import math
+# criar uma cauculadora que possua [+] Adição [-] Subtração[*] Multiplicação [/] Divizão [**] Potenciação
+# [raiz] Raiz Quadrada [%] Porcentagem. E que só pare de funcionar se o usuario pedir use a biblioteca math (se quiser)
 
 
 def raiz():
-    try:
+    try:  # tratamento de erro e resultado separado
         numero1 = float(input('Informe o numero para descobrir sua raiz: '))
         resultado = math.sqrt(numero1)
         return resultado
@@ -11,7 +13,7 @@ def raiz():
 
 
 def porcentagem():
-    try:
+    try:  # tratamento de erro e resultado separado
         numero1 = float(input('Informe a porcentagem: '))
         numero2 = float(input('Informe o numero que deseja saber a porcentagem: '))
         resultado = (numero2 / 100) * numero1
@@ -57,21 +59,24 @@ while True:
     |       [S] Sair               |
     |{'=' * 30}|''')
     operacao = str(input()).strip()
-    
+
     if operacao == 'raiz':
         print('{:.1f}'.format(raiz()))
+
     elif operacao == '%':
         print(porcentagem())
+
     elif operacao.upper() == 'S':
         print('{: ^30}'.format('Fim do Programa'))
         break
-    else:
+
+    else:  # verificado a operação
         if (operacao == '+') or (operacao == '-') or (operacao == '*') or (operacao == '/') or (operacao == '**'):
-            try:
+            try:  # tratamento de erro
                 numero1 = float(input('Informe o 1° numero: '))
                 numero2 = float(input('Informe o 2° numero: '))
 
-                if operacao == '+':
+                if operacao == '+':  # chamando as funçoes
                     print(adicao())
                 elif operacao == '-':
                     print(subtracao())
