@@ -2,16 +2,22 @@ import math
 
 
 def raiz():
-    numero1 = float(input('Informe o numero para descobrir sua raiz: '))
-    resultado = math.sqrt(numero1)
-    return resultado
+    try:
+        numero1 = float(input('Informe o numero para descobrir sua raiz: '))
+        resultado = math.sqrt(numero1)
+        return resultado
+    except ValueError:
+        print('Somente numeros')
 
 
 def porcentagem():
-    numero1 = float(input('Informe a porcentagem: '))
-    numero2 = float(input('Informe o numero que deseja saber a porcentagem: '))
-    resultado = (numero2 / 100) * numero1
-    return resultado
+    try:
+        numero1 = float(input('Informe a porcentagem: '))
+        numero2 = float(input('Informe o numero que deseja saber a porcentagem: '))
+        resultado = (numero2 / 100) * numero1
+        return resultado
+    except ValueError:
+        print('Somente numeros')
 
 
 def adicao():
@@ -37,30 +43,45 @@ def divisao():
 def potenciacao():
     resultado = math.pow(numero1, numero2)
     return resultado
-p
+
 
 while True:
-    operacao = str(input('Informe a operação "+ - * / **  raiz ou %": ')).strip()
+    print(f'''    |{' Operação ':=^30}|
+    |       [+] Adição             |
+    |       [-] Subtração          |
+    |       [*] Multiplicação      |
+    |       [/] Divizão            |
+    |       [**] Potenciação       |
+    |       [raiz] Raiz            |
+    |       [%] Porcentagem        |
+    |       [S] Sair               |
+    |{'=' * 30}|''')
+
+    operacao = str(input()).strip()
     if operacao == 'raiz':
-        print(raiz())
+        print('{:.1f}'.format(raiz()))
     elif operacao == '%':
         print(porcentagem())
+    elif operacao.upper() == 'S':
+        print('{: ^30}'.format('Fim do Programa'))
+        break
     else:
         if (operacao == '+') or (operacao == '-') or (operacao == '*') or (operacao == '/') or (operacao == '**'):
-            numero1 = float(input('Informe o 1° numero: '))
-            numero2 = float(input('Informe o 2° numero: '))
+            try:
+                numero1 = float(input('Informe o 1° numero: '))
+                numero2 = float(input('Informe o 2° numero: '))
 
-            if operacao == '+':
-                print(adicao())
-            elif operacao == '-':
-                print(subtracao())
-            elif operacao == '*':
-                print(multiplicacao())
-            elif operacao == '/':
-                print(divisao())
-            elif operacao == '**':
-                print(potenciacao())
-            else:
-                print('Somente numeros')
+                if operacao == '+':
+                    print(adicao())
+                elif operacao == '-':
+                    print(subtracao())
+                elif operacao == '*':
+                    print(multiplicacao())
+                elif operacao == '/':
+                    print(divisao())
+                elif operacao == '**':
+                    print(potenciacao())
+            except ValueError:
+                print('{: ^36}'.format('Somente numeros'))
         else:
-            print('Operação invalida')
+            print('{: ^36}'.format('Operação invalida'))
