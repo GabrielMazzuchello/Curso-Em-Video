@@ -1,6 +1,7 @@
 import math
 # criar uma cauculadora que possua [+] Adição [-] Subtração[*] Multiplicação [/] Divizão [**] Potenciação
 # [raiz] Raiz Quadrada [%] Porcentagem. E que só pare de funcionar se o usuario pedir use a biblioteca math (se quiser)
+# teste do github
 
 
 def raiz():
