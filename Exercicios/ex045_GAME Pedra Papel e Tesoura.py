@@ -5,9 +5,9 @@ itens = ('Pedra', 'Papel', 'Tesoura')  # lista de itens
 computador = randint(0, 2)  # o computador esta sorteando entre 0, 1 ou 2..
 
 print(''' Suas opções 
- [1] Pedra
- [2] Papel
- [3] Tesoura''')
+ [0] Pedra
+ [1] Papel
+ [2] Tesoura''')
 player = int(input('Qual é sua jogada? \n'))
 sleep(0.5)
 print('JO')
