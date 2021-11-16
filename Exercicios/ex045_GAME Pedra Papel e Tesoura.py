@@ -1,7 +1,7 @@
 import random
 
 itens = ('Pedra', 'Papel', 'Tesoura')  # lista de itens
-computador = random.randint(0, 2)  # o computador esta sorteando entre 0, 1 ou 2.
+computador = random.randint(0, 2)  # o computador esta sorteando entre 0, 1 ou 2..
 
 print(''' Suas opções 
  [1] Pedra
