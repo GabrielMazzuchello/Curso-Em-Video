@@ -1,13 +1,20 @@
-import random
+from random import randint
+from time import sleep
 
 itens = ('Pedra', 'Papel', 'Tesoura')  # lista de itens
-computador = random.randint(0, 2)  # o computador esta sorteando entre 0, 1 ou 2..
+computador = randint(0, 2)  # o computador esta sorteando entre 0, 1 ou 2..
 
 print(''' Suas opções 
  [1] Pedra
  [2] Papel
  [3] Tesoura''')
 player = int(input('Qual é sua jogada? \n'))
+sleep(0.5)
+print('JO')
+sleep(0.5)
+print('KEN')
+sleep(0.5)
+print('PO')
 
 print('=--=' * 7)
 print('O computador jogou: {}{}{}'.format('\033[34m', itens[computador], '\033[m'))
