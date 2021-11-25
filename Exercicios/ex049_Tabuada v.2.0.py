@@ -15,4 +15,4 @@ numero = int(input('Informe o numero da tabuada: '))
 
 print('====={}Tabuada{}====='.format(cor.GREEN, cor.CLEAR))
 for c in range(1, 11):
-    print('{} X {} = {}{}{}'.format(numero, c, cor.RED, (numero * c), cor.CLEAR))
+    print('{}{} X {}{} = {}{}{}'.format(cor.GREEN, numero, c, cor.CLEAR, cor.RED, (numero * c), cor.CLEAR))
