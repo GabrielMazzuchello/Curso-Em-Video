@@ -1,4 +1,4 @@
-sexo = input(str('Qual é seu sexo M ou F? ')).strip().upper()
+sexo = input(str('Qual é seu sexo M ou F? ')).strip().upper()[0]
 
 while sexo not in 'MmFf':
     print('Não aceitamos esse caracter! Por favor digite (F ou M)')
