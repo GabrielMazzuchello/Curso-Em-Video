@@ -1,19 +1,23 @@
 totalGasto = 0
 produtosCaros = 0
-precoBarato = 99999999999
+count = 0
 produtoBarato = ''
 
 while True:
     nome = input('Qual o nome do produto: ')
     preco = float(input('Qual o preço do Produto: '))
+    count += 1
 
     totalGasto += preco
 
     if preco > 1000:
         produtosCaros += 1
     
-    if preco < precoBarato:
-        precoBarato = preco
+    if count == 1:
+        menorPreco = preco
+        produtoBarato = nome
+    
+    if menorPreco > preco:
         produtoBarato = nome
 
     opcao = ' '
